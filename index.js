@@ -1,14 +1,14 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
-        name: 'name',
+        name: 'github',
         message: 'What is your GitHub username? (Required)',
         validate: nameInput => {
             if(nameInput) {
@@ -28,6 +28,7 @@ const questions = [
                 return true;
             } else {
                 console.log('An email address is required.');
+                return false;
             }
         }
     },
@@ -40,6 +41,7 @@ const questions = [
                 return true;
             } else {
                 console.log('A GitHub repo is required for a badge.');
+                return false;
             }
         }
     },
@@ -52,6 +54,7 @@ const questions = [
                 return true;
             } else {
                 console.log('A project title is required.');
+                return false;
             }
         }
     },
@@ -64,6 +67,7 @@ const questions = [
                 return true;
             } else {
                 console.log('A description of your project is required.');
+                return false;
             }
         }
     },
@@ -88,6 +92,7 @@ const questions = [
                 return true;
             } else {
                 console.log('A description of installation steps is required.');
+                return false;
             }
         }
     },
@@ -100,6 +105,7 @@ const questions = [
                 return true;
             } else {
                 console.log('Usage details are required.');
+                return false;
             }
         }
     },
@@ -112,6 +118,7 @@ const questions = [
                 return true;
             } else {
                 console.log('Tests are required.');
+                return false;
             }
         }
     },
@@ -124,26 +131,36 @@ const questions = [
                 return true;
             } else {
                 console.log('A description of how developers can contribute is required.');
+                return false;
             }
         }
     },
     {
-        type: 'confirm',
-        name: 'confirmCredits',
-        message: 'Would you like to list any collaborators or third-party assets?',
-        default: true
-    },
-    {
         type: 'input',
         name: 'credits',
-        message: 'Please list any collaborators, links, and third-party assets used.',
-        when: ({ confirmCredits }) => confirmCredits
+        message: 'Please list any collaborators, links, and third-party assets used. (Required)',
+        validate: creditsInput => {
+            if (creditsInput) {
+                return true;
+            } else {
+                console.log('A list of credits is required.');
+                return false;
+            }
+        }
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'Please choose a license for your project.',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNULGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License']
+        message: 'What kind of license does your project have?',
+        choices: ['MIT', 'GNU'],
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log('Please select a license.');
+                return false;
+            }
+        }
     },
 ];
 
