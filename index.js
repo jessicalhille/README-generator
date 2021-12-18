@@ -162,6 +162,20 @@ const questions = [
             }
         }
     },
+    {
+        type: 'checkbox',
+        name: 'technologies',
+        message: 'Please select the technologies that your application was built with.',
+        choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Bash', 'Python'],
+        validate: technologiesInput => {
+            if (technologiesInput) {
+                return true;
+            } else {
+                console.log('Please select a license.');
+                return false;
+            }
+        }
+    }
 ];
 
 // TODO: Create a function to write README file

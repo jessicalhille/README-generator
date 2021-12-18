@@ -1,15 +1,15 @@
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  ![made-with](https://img.shields.io/badge/Made%20with-${data.technologies}-1f425f.svg)
   ![GitHub issues](https://img.shields.io/github/issues/${data.github}/${data.repo})
   ![GitHub branches](https://badgen.net/github/branches/${data.github}/${data.repo})
-  ![GitHub commits](https://img.shields.io/github/commits-since/${data.github}/${data.repo}/v1.0.0.svg)
   ![GitHub contributors](https://img.shields.io/github/contributors/${data.github}/${data.repo})
   ![Github license](http://img.shields.io/badge/license-${data.license}-blue.svg)
 
+
   ## Description
   ${data.description}
-  Link to Deployed Application: ${data.deployed}
+  ##### Link to Deployed Application: ${data.deployed}
 
   ## Table of Contents
   * [Installation](#installation)
