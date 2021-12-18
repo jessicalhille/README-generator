@@ -1,3 +1,4 @@
+// function to generate README based on user input
 function generateMarkdown(data) {
   return `# ${data.title}
   ![made-with](https://img.shields.io/badge/Made%20with-${data.technologies}-1f425f.svg)

@@ -33,6 +33,7 @@
 
   ## Credits
   https://naereen.github.io/badges/
+  https://github.com/coding-boot-camp/potential-enigma
 
   ## License
   This project is licensed under the MIT license.
