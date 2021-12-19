@@ -1,5 +1,5 @@
 # Professional README Generator
-  ![made-with](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)
+  ![made-with](https://img.shields.io/badge/Made%20with-JavaScript,Node.js-1f425f.svg)
   ![GitHub issues](https://img.shields.io/github/issues/jessicalhille/README-generator)
   ![GitHub branches](https://badgen.net/github/branches/jessicalhille/README-generator)
   ![GitHub contributors](https://img.shields.io/github/contributors/jessicalhille/README-generator)
@@ -20,10 +20,11 @@
   * [Questions](#questions)
 
   ## Installation
-  After downloading this file, please type this into the terminal: npm inquirer
+  To use this application, please install:
+  * npm inquirer
 
   ## Usage
-  Need to update
+  After cloning the original repository to your local computer, install npm inquirer as stated above. Then use the command line to navigate and type 'node index.js'. Follow all of the prompts and enter the required fields. Once all prompts have been completed, the README.md will be created!
 
   ## Contributing
   There are no guidelines for contributing at this time.
@@ -32,7 +33,6 @@
   There is no test information for this application at this time.
 
   ## Credits
-  https://naereen.github.io/badges/
   https://github.com/coding-boot-camp/potential-enigma
 
   ## License

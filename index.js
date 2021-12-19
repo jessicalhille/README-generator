@@ -111,6 +111,18 @@ const questions = [
         }
     },
     {
+        type: 'confirm',
+        name: 'screenshotConfirm',
+        message: 'Would you like to include a screenshot of the deployed application?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'screenshot',
+        message: 'Please input the screenshot link.',
+        when: ({ screenshotConfirm }) => screenshotConfirm
+    },
+    {
         type: 'input',
         name: 'tests',
         message: 'Please write any tests and examples of how to run them. (Required)',
@@ -181,7 +193,7 @@ const questions = [
 
 // A function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`./dist/${fileName}`, data, err => {
+    fs.writeFile(`${fileName}`, data, err => {
         // if there are any errors
         if (err) {
             throw err;

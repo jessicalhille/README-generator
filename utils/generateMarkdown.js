@@ -22,7 +22,8 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
   ## Installation
-  ${data.installation}
+  To use this application, please install:
+  * ${data.installation}
 
   ## Usage
   ${data.usage}
