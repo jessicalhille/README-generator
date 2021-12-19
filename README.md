@@ -26,7 +26,7 @@
   ## Usage
   After cloning the original repository to your local computer, install npm inquirer as stated above. Then use the command line to navigate and type 'node index.js'. Follow all of the prompts and enter the required fields. Once all prompts have been completed, the README.md will be created!
   ### Screenshot of Deployed Application
-  https://user-images.githubusercontent.com/91511805/146660825-ba00fa09-d7a8-4208-9fe3-56b1a09ed51e.png
+  ![screenshot](./utils/images/screenshot.png)
 
   ## Contributing
   There are no guidelines for contributing at this time.
