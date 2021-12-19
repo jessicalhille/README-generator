@@ -27,6 +27,8 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
+  ### Screenshot of Deployed Application
+  ${data.screenshot}
 
   ## Contributing
   ${data.contributing}
